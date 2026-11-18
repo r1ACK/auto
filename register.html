@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>สมัครสมาชิก | ระบบจัดตารางสอนอัตโนมัติ</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+  <div class="auth-page">
+    <aside class="auth-side">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span>
+        <span>ระบบจัดตารางสอนอัตโนมัติ<small>แผนกวิชาคอมพิวเตอร์</small></span>
+      </a>
+      <div class="auth-hero">
+        <h1>สร้างบัญชีผู้ใช้</h1>
+        <p>นักศึกษาสมัครด้วยรหัสนักศึกษาและเลือกกลุ่มเรียน ครูสมัครด้วยรหัสเชิญที่ได้รับจากผู้ดูแลระบบ</p>
+      </div>
+      <div class="auth-foot">ภาคเรียนที่ 1/2569</div>
+    </aside>
+
+    <main class="auth-main">
+      <div class="auth-top">
+        <button type="button" class="btn btn-secondary btn-sm" data-guide="start">คู่มือการใช้งาน</button>
+      </div>
+      <div class="auth-box">
+        <h2>สมัครสมาชิก</h2>
+        <p class="lead">เลือกประเภทผู้ใช้ แล้วกรอกข้อมูลให้ครบ</p>
+
+        <div class="seg" role="tablist" aria-label="ประเภทผู้ใช้">
+          <button type="button" role="tab" data-role="student" aria-selected="true">นักศึกษา</button>
+          <button type="button" role="tab" data-role="teacher" aria-selected="false">ครู</button>
+        </div>
+
+        <div id="reg-error" class="alert alert-error hidden" role="alert"></div>
+
+        <form id="reg-form" novalidate>
+          <div class="field">
+            <label for="username" id="username-label">รหัสนักศึกษา</label>
+            <input class="input" id="username" autocomplete="username" required>
+            <span class="hint">ใช้ได้เฉพาะ a-z, 0-9, จุด, ขีด ยาว 3-30 ตัวอักษร</span>
+          </div>
+          <div class="field">
+            <label for="fullname">ชื่อ-นามสกุล</label>
+            <input class="input" id="fullname" autocomplete="name" required>
+          </div>
+          <div class="field" id="group-field">
+            <label for="group">กลุ่มเรียน</label>
+            <select class="input" id="group" required>
+              <option value="">กำลังโหลดกลุ่มเรียน...</option>
+            </select>
+          </div>
+          <div class="field hidden" id="invite-field">
+            <label for="invite">รหัสเชิญครู</label>
+            <input class="input" id="invite" autocomplete="off">
+            <span class="hint">รหัสไม่ถูกต้อง ระบบจะสร้างเป็นบัญชีนักศึกษาแทน</span>
+          </div>
+          <div class="grid-2">
+            <div class="field">
+              <label for="password">รหัสผ่าน</label>
+              <input class="input" id="password" type="password" autocomplete="new-password" minlength="6" required>
+            </div>
+            <div class="field">
+              <label for="password2">ยืนยันรหัสผ่าน</label>
+              <input class="input" id="password2" type="password" autocomplete="new-password" required>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg btn-block">สร้างบัญชีและเข้าสู่ระบบ</button>
+        </form>
+
+        <p class="auth-alt">มีบัญชีแล้ว <a href="index.html">เข้าสู่ระบบ</a></p>
+      </div>
+    </main>
+  </div>
+
+  <script type="module" src="js/register.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+/* ===== Timetable grid (shared: app, student, print) ===== */
+.tt-wrap { overflow-x: auto; }
+table.tt { width: 100%; min-width: 860px; border-collapse: collapse; table-layout: fixed; background: var(--c-surface); font-size: var(--fs-xs); }
+table.tt th, table.tt td { border: 1px solid var(--c-line-strong); padding: 0; }
+table.tt thead th { background: #f2f6fd; color: var(--c-navy); font-weight: 600; padding: var(--sp-2) var(--sp-1); text-align: center; line-height: 1.35; }
+table.tt thead th .p-no { display: block; font-size: var(--fs-sm); }
+table.tt thead th .p-time { display: block; font-weight: 400; color: var(--c-muted); font-variant-numeric: tabular-nums; }
+table.tt th.day { width: 92px; background: #f2f6fd; color: var(--c-navy); font-size: var(--fs-sm); text-align: center; }
+table.tt col.lunch-col { width: 40px; }
+table.tt td.lunch {
+  background: repeating-linear-gradient(135deg, #f4f7fc, #f4f7fc 6px, #e9eef8 6px, #e9eef8 12px);
+  color: var(--c-muted); text-align: center; font-weight: 600;
+  writing-mode: vertical-rl; letter-spacing: 0; font-size: var(--fs-xs);
+}
+table.tt td.empty { height: 76px; }
+table.tt td.slot { height: 76px; padding: 3px; vertical-align: top; }
+.tt-block {
+  height: 100%; border-radius: 6px; padding: 6px 8px;
+  background: var(--c-primary-soft); border-left: 4px solid var(--c-primary);
+  line-height: 1.4; overflow: hidden;
+  -webkit-print-color-adjust: exact; print-color-adjust: exact;
+}
+.tt-block.cat-general { background: var(--c-sky-soft); border-left-color: var(--c-sky); }
+.tt-block.cat-activity { background: var(--c-success-soft); border-left-color: var(--c-success); }
+.tt-block .s-name { font-weight: 600; color: var(--c-text); font-size: var(--fs-xs); display: block; }
+.tt-block .s-meta { color: var(--c-muted); display: block; font-size: 12px; }
+.tt-legend { display: flex; gap: var(--sp-4); flex-wrap: wrap; font-size: var(--fs-xs); color: var(--c-muted); margin-top: var(--sp-3); }
+.tt-legend i { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; background: var(--c-primary); }
+.tt-legend i.g { background: var(--c-sky); }
+.tt-legend i.a { background: var(--c-success); }
+.tt-summary { display: flex; gap: var(--sp-5); flex-wrap: wrap; font-size: var(--fs-sm); color: var(--c-muted); margin-top: var(--sp-3); }
+.tt-summary strong { color: var(--c-text); font-variant-numeric: tabular-nums; }
+
+/* Mobile day list */
+.tt-days { display: none; }
+.tt-day { margin-bottom: var(--sp-4); }
+.tt-day h3 { font-size: var(--fs-md); color: var(--c-navy); border-bottom: 1px solid var(--c-line); padding-bottom: var(--sp-1); margin-bottom: var(--sp-2); }
+.tt-day-item { display: grid; grid-template-columns: 92px 1fr; gap: var(--sp-2); margin-bottom: var(--sp-2); align-items: stretch; }
+.tt-day-time { font-size: var(--fs-xs); color: var(--c-muted); padding-top: 6px; }
+@media (max-width: 640px) {
+  .tt-wrap { display: none; }
+  .tt-days { display: block; }
+}
+@media print {
+  .tt-wrap { display: block !important; }
+  .tt-days { display: none !important; }
+}

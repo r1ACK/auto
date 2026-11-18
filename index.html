@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>เข้าสู่ระบบ | ระบบจัดตารางสอนอัตโนมัติ</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+  <div class="auth-page">
+    <aside class="auth-side">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span>
+        <span>ระบบจัดตารางสอนอัตโนมัติ<small>แผนกวิชาคอมพิวเตอร์</small></span>
+      </a>
+      <div class="auth-hero">
+        <h1>จัดตารางสอนทั้งแผนก<br>เสร็จในไม่กี่วินาที</h1>
+        <p>ครู กลุ่มเรียน ห้องเรียน และเงื่อนไขทั้ง 18 ข้อ ประมวลผลอัตโนมัติ ไม่มีคาบชน พร้อม Export PDF ได้ทันที</p>
+        <div class="hero-blocks" aria-hidden="true">
+          <span class="on"></span><span class="on"></span><span></span><span class="on2"></span><span class="on2"></span>
+          <span></span><span class="on"></span><span class="on"></span><span class="on"></span><span></span>
+          <span class="on2"></span><span class="on2"></span><span></span><span class="on"></span><span class="on"></span>
+        </div>
+      </div>
+      <div class="auth-foot">ภาคเรียนที่ 1/2569</div>
+    </aside>
+
+    <main class="auth-main">
+      <div class="auth-top">
+        <button type="button" class="btn btn-secondary btn-sm" data-guide="start">คู่มือการใช้งาน</button>
+      </div>
+      <div class="auth-box">
+        <h2>เข้าสู่ระบบ</h2>
+        <p class="lead">ครูและนักศึกษาใช้หน้าเดียวกัน ระบบพาไปหน้าของคุณอัตโนมัติ</p>
+
+        <div id="login-error" class="alert alert-error hidden" role="alert"></div>
+
+        <form id="login-form" novalidate>
+          <div class="field">
+            <label for="username">ชื่อผู้ใช้ / รหัสนักศึกษา</label>
+            <input class="input" id="username" name="username" autocomplete="username" required>
+          </div>
+          <div class="field">
+            <label for="password">รหัสผ่าน</label>
+            <input class="input" id="password" name="password" type="password" autocomplete="current-password" required>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg btn-block">เข้าสู่ระบบ</button>
+        </form>
+
+        <p class="auth-alt">ยังไม่มีบัญชี <a href="register.html">สมัครสมาชิก</a></p>
+
+        <div id="demo-accounts" class="demo-accounts hidden">
+          โหมดทดลอง: ครู <code>teacher</code> / <code>teacher1234</code> &nbsp; นักศึกษา <code>student</code> / <code>student1234</code>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script type="module" src="js/login.js"></script>
+</body>
+</html>

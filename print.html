@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Export PDF | ระบบจัดตารางสอนอัตโนมัติ</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/timetable.css">
+  <link rel="stylesheet" href="css/print.css">
+</head>
+<body>
+  <div class="print-toolbar">
+    <div>
+      <strong id="print-title">กำลังเตรียมเอกสาร...</strong>
+      <div class="small muted">เลือกปลายทาง "Save as PDF" · แนวนอน A4 · 1 ตารางต่อ 1 หน้า</div>
+    </div>
+    <div class="row">
+      <button type="button" class="btn btn-secondary btn-sm" data-guide="teacher">คู่มือการใช้งาน</button>
+      <button type="button" class="btn btn-primary" id="print-btn" disabled>พิมพ์ / บันทึก PDF</button>
+    </div>
+  </div>
+  <div class="print-area" id="print-root">
+    <div class="skeleton" style="height:520px"></div>
+  </div>
+  <script type="module" src="js/print.js"></script>
+</body>
+</html>

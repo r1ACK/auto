@@ -1,0 +1,37 @@
+{
+  "teachers": [
+    { "id": "T01", "name": "ครูอภิชาต", "position": "head", "department": "computer", "minHours": 18, "maxHours": 24, "unavailable": [], "softUnavailable": [], "subjectIds": [] },
+    { "id": "T02", "name": "ครูเมธา", "position": "regular", "department": "computer", "minHours": 18, "maxHours": 35,
+      "unavailable": [ { "day": 0, "start": "08:00", "end": "12:00" }, { "day": 4, "start": "13:00", "end": "17:00" } ],
+      "softUnavailable": [ { "day": 0, "start": "08:00", "end": "12:00" }, { "day": 4, "start": "13:00", "end": "16:00" } ],
+      "subjectIds": [] },
+    { "id": "T03", "name": "ครูวิไล", "position": "regular", "department": "computer", "minHours": 18, "maxHours": 35, "unavailable": [], "softUnavailable": [], "subjectIds": [] },
+    { "id": "T04", "name": "ครูอรยา", "position": "general", "department": "general", "minHours": null, "maxHours": null, "unavailable": [], "softUnavailable": [], "subjectIds": ["S08"] },
+    { "id": "T05", "name": "ครูธนา", "position": "general", "department": "general", "minHours": null, "maxHours": null, "unavailable": [], "softUnavailable": [], "subjectIds": ["S10"] },
+    { "id": "T06", "name": "ครูนฤมล", "position": "general", "department": "general", "minHours": null, "maxHours": null, "unavailable": [], "softUnavailable": [], "subjectIds": ["S09"] }
+  ],
+  "groups": [
+    { "id": "G1", "name": "ปวช.1/1", "students": 18, "advisorId": "T01" },
+    { "id": "G2", "name": "ปวช.1/2", "students": 17, "advisorId": "T02" },
+    { "id": "G3", "name": "ปวช.1/3", "students": 15, "advisorId": "T03" }
+  ],
+  "rooms": [
+    { "id": "R1", "name": "ห้องคอมพิวเตอร์ 1", "type": "computer" },
+    { "id": "R2", "name": "ห้องคอมพิวเตอร์ 2", "type": "computer" },
+    { "id": "R3", "name": "ห้องทฤษฎี 1", "type": "theory" },
+    { "id": "R4", "name": "ห้องทฤษฎี 2", "type": "theory" }
+  ],
+  "subjects": [
+    { "id": "S01", "name": "วิชาการเขียนโปรแกรมคอมพิวเตอร์", "periods": 4, "roomType": "computer", "category": "dept" },
+    { "id": "S02", "name": "วิชาการพัฒนาโปรแกรมบนอุปกรณ์พกพา", "periods": 4, "roomType": "computer", "category": "dept" },
+    { "id": "S03", "name": "วิชาไมโครคอนโทรลเลอร์", "periods": 4, "roomType": "computer", "category": "dept" },
+    { "id": "S04", "name": "วิชาวงจรพัลส์และดิจิทัล", "periods": 4, "roomType": "theory", "category": "dept" },
+    { "id": "S05", "name": "วิชาอุปกรณ์อิเล็กทรอนิกส์และวงจร", "periods": 4, "roomType": "theory", "category": "dept" },
+    { "id": "S06", "name": "วิชาการใช้โปรแกรมคอมพิวเตอร์กราฟฟิก", "periods": 4, "roomType": "computer", "category": "dept" },
+    { "id": "S07", "name": "วิชาคณิตศาสตร์คอมพิวเตอร์", "periods": 2, "roomType": "theory", "category": "dept" },
+    { "id": "S08", "name": "วิชาภาษาไทย", "periods": 2, "roomType": "any", "category": "general" },
+    { "id": "S09", "name": "วิชาภาษาอังกฤษ", "periods": 2, "roomType": "any", "category": "general" },
+    { "id": "S10", "name": "วิชาวิทยาศาสตร์", "periods": 2, "roomType": "any", "category": "general" },
+    { "id": "S11", "name": "วิชาลูกเสือ", "periods": 2, "roomType": "field", "category": "activity", "fixedDay": 2, "fixedStart": "15:00", "combined": true, "locationText": "สนามหญ้าหน้าเสาธง" }
+  ]
+}

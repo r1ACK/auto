@@ -1,0 +1,12 @@
+﻿id,name,periods,room_type,category,fixed_day,fixed_start,combined,location_text
+S01,วิชาการเขียนโปรแกรมคอมพิวเตอร์,4,computer,dept,,,false,
+S02,วิชาการพัฒนาโปรแกรมบนอุปกรณ์พกพา,4,computer,dept,,,false,
+S03,วิชาไมโครคอนโทรลเลอร์,4,computer,dept,,,false,
+S04,วิชาวงจรพัลส์และดิจิทัล,4,theory,dept,,,false,
+S05,วิชาอุปกรณ์อิเล็กทรอนิกส์และวงจร,4,theory,dept,,,false,
+S06,วิชาการใช้โปรแกรมคอมพิวเตอร์กราฟฟิก,4,computer,dept,,,false,
+S07,วิชาคณิตศาสตร์คอมพิวเตอร์,2,theory,dept,,,false,
+S08,วิชาภาษาไทย,2,any,general,,,false,
+S09,วิชาภาษาอังกฤษ,2,any,general,,,false,
+S10,วิชาวิทยาศาสตร์,2,any,general,,,false,
+S11,วิชาลูกเสือ,2,field,activity,พุธ,15:00,true,สนามหญ้าหน้าเสาธง

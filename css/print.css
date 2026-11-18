@@ -1,0 +1,23 @@
+/* ===== Print / PDF export ===== */
+@page { size: A4 landscape; margin: 10mm; }
+
+.print-toolbar { position: sticky; top: 0; z-index: 10; display: flex; gap: var(--sp-3); align-items: center; justify-content: space-between; flex-wrap: wrap; padding: var(--sp-3) var(--sp-5); background: var(--c-surface); border-bottom: 1px solid var(--c-line); }
+.print-area { max-width: 1120px; margin: var(--sp-5) auto; padding: 0 var(--sp-4); }
+.sheet { background: #fff; border: 1px solid var(--c-line); border-radius: var(--radius); padding: var(--sp-5); margin-bottom: var(--sp-5); }
+.sheet-head { display: flex; justify-content: space-between; align-items: flex-end; gap: var(--sp-4); border-bottom: 2px solid var(--c-navy); padding-bottom: var(--sp-2); margin-bottom: var(--sp-3); }
+.sheet-head h2 { margin: 0; font-size: 22px; color: var(--c-navy); }
+.sheet-head .meta { text-align: right; font-size: var(--fs-xs); color: var(--c-muted); line-height: 1.5; }
+.sheet-foot { display: flex; justify-content: space-between; align-items: flex-end; gap: var(--sp-4); margin-top: var(--sp-4); font-size: var(--fs-xs); color: var(--c-muted); }
+.sign { text-align: center; color: var(--c-text); font-size: var(--fs-sm); line-height: 2; }
+.sheet table.tt { min-width: 0; }
+.sheet table.tt td.slot, .sheet table.tt td.empty { height: 64px; }
+
+@media print {
+  body { background: #fff; }
+  .print-toolbar, .no-print { display: none !important; }
+  .print-area { max-width: none; margin: 0; padding: 0; }
+  .sheet { border: 0; border-radius: 0; padding: 0; margin: 0; page-break-after: always; break-after: page; }
+  .sheet:last-child { page-break-after: auto; break-after: auto; }
+  table.tt { font-size: 11px; }
+  .tt-block .s-meta { font-size: 10.5px; }
+}

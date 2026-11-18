@@ -1,0 +1,27 @@
+-- Seed data from the competition brief (ภาคเรียน 1/2569). Run after schema.sql.
+begin;
+insert into public.teachers (id,name,position,department,min_hours,max_hours,unavailable,soft_unavailable,subject_ids) values ('T01','ครูอภิชาต','head','computer',18,24,'[]'::jsonb,'[]'::jsonb,'{}') on conflict (id) do nothing;
+insert into public.teachers (id,name,position,department,min_hours,max_hours,unavailable,soft_unavailable,subject_ids) values ('T02','ครูเมธา','regular','computer',18,35,'[{"day": 0, "start": "08:00", "end": "12:00"}, {"day": 4, "start": "13:00", "end": "17:00"}]'::jsonb,'[{"day": 0, "start": "08:00", "end": "12:00"}, {"day": 4, "start": "13:00", "end": "16:00"}]'::jsonb,'{}') on conflict (id) do nothing;
+insert into public.teachers (id,name,position,department,min_hours,max_hours,unavailable,soft_unavailable,subject_ids) values ('T03','ครูวิไล','regular','computer',18,35,'[]'::jsonb,'[]'::jsonb,'{}') on conflict (id) do nothing;
+insert into public.teachers (id,name,position,department,min_hours,max_hours,unavailable,soft_unavailable,subject_ids) values ('T04','ครูอรยา','general','general',null,null,'[]'::jsonb,'[]'::jsonb,'{S08}') on conflict (id) do nothing;
+insert into public.teachers (id,name,position,department,min_hours,max_hours,unavailable,soft_unavailable,subject_ids) values ('T05','ครูธนา','general','general',null,null,'[]'::jsonb,'[]'::jsonb,'{S10}') on conflict (id) do nothing;
+insert into public.teachers (id,name,position,department,min_hours,max_hours,unavailable,soft_unavailable,subject_ids) values ('T06','ครูนฤมล','general','general',null,null,'[]'::jsonb,'[]'::jsonb,'{S09}') on conflict (id) do nothing;
+insert into public.rooms (id,name,type) values ('R1','ห้องคอมพิวเตอร์ 1','computer') on conflict (id) do nothing;
+insert into public.rooms (id,name,type) values ('R2','ห้องคอมพิวเตอร์ 2','computer') on conflict (id) do nothing;
+insert into public.rooms (id,name,type) values ('R3','ห้องทฤษฎี 1','theory') on conflict (id) do nothing;
+insert into public.rooms (id,name,type) values ('R4','ห้องทฤษฎี 2','theory') on conflict (id) do nothing;
+insert into public.subjects (id,name,periods,room_type,category,fixed_day,fixed_start,combined,location_text) values ('S01','วิชาการเขียนโปรแกรมคอมพิวเตอร์',4,'computer','dept',null,null,false,null) on conflict (id) do nothing;
+insert into public.subjects (id,name,periods,room_type,category,fixed_day,fixed_start,combined,location_text) values ('S02','วิชาการพัฒนาโปรแกรมบนอุปกรณ์พกพา',4,'computer','dept',null,null,false,null) on conflict (id) do nothing;
+insert into public.subjects (id,name,periods,room_type,category,fixed_day,fixed_start,combined,location_text) values ('S03','วิชาไมโครคอนโทรลเลอร์',4,'computer','dept',null,null,false,null) on conflict (id) do nothing;
+insert into public.subjects (id,name,periods,room_type,category,fixed_day,fixed_start,combined,location_text) values ('S04','วิชาวงจรพัลส์และดิจิทัล',4,'theory','dept',null,null,false,null) on conflict (id) do nothing;
+insert into public.subjects (id,name,periods,room_type,category,fixed_day,fixed_start,combined,location_text) values ('S05','วิชาอุปกรณ์อิเล็กทรอนิกส์และวงจร',4,'theory','dept',null,null,false,null) on conflict (id) do nothing;
+insert into public.subjects (id,name,periods,room_type,category,fixed_day,fixed_start,combined,location_text) values ('S06','วิชาการใช้โปรแกรมคอมพิวเตอร์กราฟฟิก',4,'computer','dept',null,null,false,null) on conflict (id) do nothing;
+insert into public.subjects (id,name,periods,room_type,category,fixed_day,fixed_start,combined,location_text) values ('S07','วิชาคณิตศาสตร์คอมพิวเตอร์',2,'theory','dept',null,null,false,null) on conflict (id) do nothing;
+insert into public.subjects (id,name,periods,room_type,category,fixed_day,fixed_start,combined,location_text) values ('S08','วิชาภาษาไทย',2,'any','general',null,null,false,null) on conflict (id) do nothing;
+insert into public.subjects (id,name,periods,room_type,category,fixed_day,fixed_start,combined,location_text) values ('S09','วิชาภาษาอังกฤษ',2,'any','general',null,null,false,null) on conflict (id) do nothing;
+insert into public.subjects (id,name,periods,room_type,category,fixed_day,fixed_start,combined,location_text) values ('S10','วิชาวิทยาศาสตร์',2,'any','general',null,null,false,null) on conflict (id) do nothing;
+insert into public.subjects (id,name,periods,room_type,category,fixed_day,fixed_start,combined,location_text) values ('S11','วิชาลูกเสือ',2,'field','activity',2,'15:00',true,'สนามหญ้าหน้าเสาธง') on conflict (id) do nothing;
+insert into public.groups (id,name,students,advisor_id) values ('G1','ปวช.1/1',18,'T01') on conflict (id) do nothing;
+insert into public.groups (id,name,students,advisor_id) values ('G2','ปวช.1/2',17,'T02') on conflict (id) do nothing;
+insert into public.groups (id,name,students,advisor_id) values ('G3','ปวช.1/3',15,'T03') on conflict (id) do nothing;
+commit;

@@ -1,0 +1,7 @@
+﻿id,name,position,department,min_hours,max_hours,unavailable,soft_unavailable,subject_ids
+T01,ครูอภิชาต,head,computer,18,24,,,
+T02,ครูเมธา,regular,computer,18,35,จันทร์ 08:00-12:00; ศุกร์ 13:00-17:00,จันทร์ 08:00-12:00; ศุกร์ 13:00-16:00,
+T03,ครูวิไล,regular,computer,18,35,,,
+T04,ครูอรยา,general,general,,,,,S08
+T05,ครูธนา,general,general,,,,,S10
+T06,ครูนฤมล,general,general,,,,,S09

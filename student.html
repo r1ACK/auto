@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ตารางเรียน | ระบบจัดตารางสอนอัตโนมัติ</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/timetable.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="student.html">
+      <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span>
+      <span>ระบบจัดตารางสอนอัตโนมัติ<small>สำหรับนักศึกษา</small></span>
+    </a>
+    <div class="topbar-right">
+      <span class="user-chip" id="user-chip"></span>
+      <button type="button" class="btn btn-secondary btn-sm" data-guide="student">คู่มือการใช้งาน</button>
+      <button type="button" class="btn btn-ghost btn-sm" id="logout">ออกจากระบบ</button>
+    </div>
+  </header>
+
+  <main class="content" style="max-width:1200px;margin:0 auto">
+    <div id="view-root">
+      <div class="skeleton" style="height:48px;width:40%;margin-bottom:24px"></div>
+      <div class="skeleton" style="height:360px"></div>
+    </div>
+  </main>
+
+  <script type="module" src="js/student-app.js"></script>
+</body>
+</html>
